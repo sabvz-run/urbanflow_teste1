@@ -1,0 +1,60 @@
+/* Ícones lineares por máscara SVG. */
+
+/* Ícones de linha: cada classe define o SVG no token --ic e a máscara recorta a forma,
+   pintada com a cor atual do texto. Assim os <span> vazios viram ícones nítidos. */
+.line-icon {
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  flex: 0 0 auto;
+  color: currentColor;
+  background-color: currentColor;
+  -webkit-mask: var(--ic) center / contain no-repeat;
+  mask: var(--ic) center / contain no-repeat;
+}
+
+.icon-map {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z'/%3E%3Cpath d='M9 4v14M15 6v14'/%3E%3C/svg%3E");
+}
+
+.icon-route {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='6' cy='6' r='2.4'/%3E%3Ccircle cx='18' cy='18' r='2.4'/%3E%3Cpath d='M8.4 6H15a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h6.6'/%3E%3C/svg%3E");
+}
+
+.icon-spark {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z'/%3E%3C/svg%3E");
+}
+
+.icon-list {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01'/%3E%3C/svg%3E");
+}
+
+.icon-home {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11 12 4l9 7'/%3E%3Cpath d='M5 10v9h14v-9'/%3E%3C/svg%3E");
+}
+
+.icon-calendar {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='5' width='16' height='16' rx='2'/%3E%3Cpath d='M4 9h16M8 3v4M16 3v4'/%3E%3C/svg%3E");
+}
+
+.icon-dashboard {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='9' rx='1'/%3E%3Crect x='14' y='3' width='7' height='5' rx='1'/%3E%3Crect x='14' y='11' width='7' height='10' rx='1'/%3E%3Crect x='3' y='15' width='7' height='6' rx='1'/%3E%3C/svg%3E");
+}
+
+.icon-star {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 17l-5.2 2.6 1-5.8L3.5 9.7l5.9-.9z'/%3E%3C/svg%3E");
+}
+
+.icon-bell {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6'/%3E%3Cpath d='M10 20a2 2 0 0 0 4 0'/%3E%3C/svg%3E");
+}
+
+.icon-check {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 12.5 9 17l10.5-10.5'/%3E%3C/svg%3E");
+}
+
+.icon-user {
+  --ic: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4 4-6.5 8-6.5s8 2.5 8 6.5'/%3E%3C/svg%3E");
+}
+

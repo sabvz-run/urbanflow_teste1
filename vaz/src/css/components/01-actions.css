@@ -1,0 +1,104 @@
+/* Botões e ações clicáveis: a base de superfície plana + cor sólida usada em todo o tema escuro,
+   com acentos em azul e teal da marca. */
+.button,
+.nav-link,
+.country-button,
+.city-button,
+.icon-button,
+.icon-control,
+.floating-action,
+.star-button {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0.74rem 1.14rem;
+  border-radius: 999px;
+  font-weight: 800;
+  text-align: center;
+  box-shadow: var(--shadow-tiny);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+/* Botão principal: gradiente da via (azul -> teal), o mesmo da marca, para destacar a ação primária. */
+.button-primary {
+  background: linear-gradient(135deg, var(--primary-dark), var(--sky-bright), var(--flow));
+  color: #04121f;
+  box-shadow: 0 12px 28px rgba(0, 229, 211, 0.18);
+}
+
+.button-primary,
+.button-secondary,
+.button-ghost {
+  gap: 0.45rem;
+}
+
+.button-primary:hover {
+  background: linear-gradient(135deg, var(--sky), var(--sky-bright), var(--flow));
+}
+
+/* Botão secundário: contorno azul sobre fundo levemente tingido, para ações de apoio. */
+.button-secondary {
+  border: 1px solid rgba(53, 163, 255, 0.4);
+  background: var(--sky-soft);
+  color: var(--sky-bright);
+}
+
+/* Botão fantasma: o mais leve da escala, usado em links e ações terciárias. */
+.button-ghost {
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  color: var(--ink);
+}
+
+.icon-button {
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: var(--tap);
+  height: var(--tap);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-button span {
+  width: 20px;
+  height: 2px;
+  background: #ffffff;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: var(--tap);
+  padding: 0.72rem 0.95rem;
+  border-radius: 16px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 700;
+  text-align: left;
+  transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.nav-link.is-active,
+.nav-link:hover {
+  background: var(--sky-soft);
+  color: var(--ink);
+}
+
+.nav-link.is-active {
+  box-shadow: inset 3px 0 0 var(--flow), inset 0 0 0 1px rgba(53, 163, 255, 0.22);
+}
+
+.panel,

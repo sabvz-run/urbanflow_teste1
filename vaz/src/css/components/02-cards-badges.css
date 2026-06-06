@@ -1,0 +1,176 @@
+/* Painéis, cards, indicadores e badges. */
+
+.card,
+.alert-card,
+.agenda-item,
+.itinerary-item,
+.rating-card,
+.timeline-row,
+.pdf-document {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel,
+.card {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--surface-soft), var(--surface));
+  box-shadow: var(--shadow-soft);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.panel {
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 0;
+  padding: 1rem;
+}
+
+.indicator-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.indicator-card {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 20px;
+  background: linear-gradient(150deg, var(--surface-soft), var(--surface));
+  box-shadow: var(--shadow-soft);
+}
+
+.indicator-card .line-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--flow);
+}
+
+.indicator-card strong {
+  color: var(--ink);
+  font-family: var(--brand-font);
+  font-weight: 800;
+}
+
+.indicator-card small {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.event-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 188px;
+  justify-content: space-between;
+  border-radius: 24px;
+  background: linear-gradient(160deg, var(--surface-soft), var(--surface));
+}
+
+.event-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Faixa lateral nas cores da marca (azul da via -> teal dos campos), como assinatura de cada card. */
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  height: auto;
+  background: linear-gradient(180deg, var(--sky-bright), var(--flow));
+}
+
+/* Curva "flow" do logotipo repetida no canto do card, com presença suave. */
+.event-card::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  bottom: -36px;
+  width: 130px;
+  height: 88px;
+  border: 13px solid rgba(0, 229, 211, 0.16);
+  border-top: 0;
+  border-left: 0;
+  border-radius: 0 0 999px 0;
+  pointer-events: none;
+  transform: rotate(22deg);
+}
+
+.event-card.is-selected {
+  border-color: rgba(53, 163, 255, 0.45);
+  background: linear-gradient(160deg, rgba(37, 99, 255, 0.18), var(--surface));
+  box-shadow: 0 0 0 3px rgba(37, 99, 255, 0.22), var(--shadow);
+}
+
+.card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.badge,
+.status-pill,
+.context-pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(53, 163, 255, 0.28);
+  background: var(--sky-soft);
+  color: var(--sky-bright);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.badge-soft,
+.context-pill {
+  border-color: var(--line-soft);
+  background: var(--surface-soft);
+  color: var(--muted);
+}
+
+.eyebrow {
+  width: fit-content;
+  padding: 0.2rem 0.64rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 229, 211, 0.3);
+  background: rgba(0, 229, 211, 0.1);
+  color: var(--flow);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.screen-heading .eyebrow {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--flow);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+}
+

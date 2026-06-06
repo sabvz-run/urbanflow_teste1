@@ -1,0 +1,136 @@
+/* Tokens globais e base do documento: paleta, tipografia, sombras, raios e reset. */
+:root {
+  /* Paleta central: mudar aqui evita sair remendando cor pelo projeto inteiro. */
+  --bg: #0b1324;
+  --bg-soft: #111b2d;
+  --surface: rgba(12, 25, 45, 0.86);
+  --surface-soft: rgba(18, 34, 58, 0.72);
+  --surface-strong: #13233b;
+  --ink: #e6edf3;
+  --muted: #95a3b8;
+  --line: #2b3a55;
+  --line-soft: rgba(230, 237, 243, 0.16);
+  --navy: #0b1324;
+  --navy-deep: #050d1b;
+  --sky: #2563ff;
+  --sky-bright: #35a3ff;
+  --sky-soft: rgba(37, 99, 255, 0.14);
+  --flow: #00e5d3;
+  --flow-dark: #00b9bd;
+  --alert: #f59e0b;
+  --alert-soft: #fef3da;
+  --risk: #dc2626;
+  --risk-soft: #fde4e4;
+  --primary: var(--sky);
+  --primary-dark: #2563ff;
+  --secondary: var(--navy);
+  --accent: var(--alert);
+  --warning: var(--alert);
+  --danger: var(--risk);
+  --success: var(--flow);
+  /* Sombras de app: presentes, mas sem aquele peso de template pronto. */
+  --shadow: 0 24px 54px rgba(0, 0, 0, 0.34);
+  --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.22);
+  --shadow-tiny: 0 1px 2px rgba(0, 0, 0, 0.22);
+  --radius: 22px;
+  --tap: 44px;
+  --container: 1250px;
+  /* Urbanist conversa com a logo; Manrope fica com a leitura longa. */
+  --font: Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --brand-font: Urbanist, Manrope, ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Fundo de mapa bem sutil: da identidade, mas deixa os cards respirarem. */
+  background:
+    radial-gradient(900px 520px at 100% -10%, rgba(37, 99, 255, 0.2), transparent 62%),
+    radial-gradient(760px 480px at -8% 14%, rgba(0, 229, 211, 0.11), transparent 58%),
+    linear-gradient(90deg, rgba(53, 163, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(53, 163, 255, 0.055) 1px, transparent 1px),
+    var(--bg);
+  background-size: auto, auto, 40px 40px, 40px 40px, auto;
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  color: var(--ink);
+  font-family: var(--brand-font);
+  font-size: clamp(1.7rem, 4vw, 2.65rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 0.85rem;
+  color: var(--ink);
+  font-family: var(--brand-font);
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 0.45rem;
+  color: var(--ink);
+  font-family: var(--brand-font);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+p {
+  color: var(--muted);
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(98, 173, 241, 0.38);
+  outline-offset: 3px;
+}

@@ -1,0 +1,28 @@
+/* Ajustes responsivos de componentes. */
+
+@media (min-width: 1020px) {
+  .primary-nav .nav-link {
+    color: rgba(230, 237, 243, 0.66);
+  }
+
+  .primary-nav .nav-link.is-active,
+  .primary-nav .nav-link:hover {
+    background: linear-gradient(90deg, rgba(37, 99, 255, 0.26), rgba(0, 229, 211, 0.12));
+    color: #ffffff;
+    box-shadow: inset 3px 0 0 var(--flow), inset 0 0 0 1px rgba(53, 163, 255, 0.24);
+  }
+
+  .floating-actions {
+    display: none;
+  }
+
+  .toast-region {
+    bottom: 1rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .indicator-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

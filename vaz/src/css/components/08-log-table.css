@@ -1,0 +1,20 @@
+/* Tabela de auditoria. */
+
+.log-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+.log-table th,
+.log-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--line-soft);
+  text-align: left;
+}
+
+.log-table th {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}

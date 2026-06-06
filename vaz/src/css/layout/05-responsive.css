@@ -1,0 +1,110 @@
+/* Comportamento responsivo do layout. */
+
+@media (min-width: 720px) {
+  .main-content {
+    padding: 1.35rem 1.35rem 7.4rem;
+  }
+
+  .form-grid,
+  .quick-stats,
+  .metrics-grid,
+  .action-grid,
+  .external-grid,
+  .pdf-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .welcome-hero,
+  .home-layout,
+  .country-layout,
+  .routes-layout,
+  .ratings-layout,
+  .pdf-layout {
+    grid-template-columns: minmax(0, 1.22fr) minmax(300px, 0.78fr);
+  }
+
+  .itinerary-layout,
+  .dashboard-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1020px) {
+  .app-shell {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+
+  .app-header {
+    grid-column: 1 / -1;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    position: sticky;
+    top: 73px;
+    display: grid;
+    align-self: start;
+    max-height: calc(100vh - 73px);
+    border-right: 1px solid rgba(31, 143, 222, 0.16);
+    border-bottom: 0;
+    background:
+      radial-gradient(220px 220px at 18% 0%, rgba(77, 182, 255, 0.16), transparent 66%),
+      radial-gradient(180px 180px at 90% 36%, rgba(18, 178, 154, 0.12), transparent 68%),
+      linear-gradient(90deg, rgba(77, 182, 255, 0.09) 1px, transparent 1px),
+      var(--navy-deep);
+    background-size: auto, auto, 38px 38px, auto;
+    box-shadow: 8px 0 28px rgba(8, 31, 55, 0.08);
+  }
+
+  .primary-nav::before {
+    content: "";
+    display: block;
+    min-height: 128px;
+    margin-bottom: 0.85rem;
+    border: 1px solid rgba(77, 182, 255, 0.26);
+    border-radius: 28px;
+    background:
+      linear-gradient(90deg, rgba(7, 29, 51, 0.28), rgba(7, 29, 51, 0.02) 42%, rgba(7, 29, 51, 0.28)),
+      linear-gradient(180deg, rgba(7, 29, 51, 0.04), rgba(7, 29, 51, 0.28)),
+      url("../../assets/img/urbanflow-symbol.png") center 52% / 78% auto no-repeat;
+    background-color: var(--navy-deep);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 18px 34px rgba(2, 16, 29, 0.2);
+  }
+
+  .main-content {
+    width: min(100%, calc(var(--container) + 2rem));
+    padding: 1.75rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .map-layout {
+    grid-template-columns: 230px minmax(0, 1.65fr) 270px;
+  }
+
+  .dashboard-layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  }
+
+  .dashboard-layout > :last-child {
+    grid-column: 1 / -1;
+  }
+
+  .metrics-grid,
+  .action-grid,
+  .external-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,106 @@
+/* Header fixo e marca superior. */
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(77, 182, 255, 0.18);
+  background:
+    linear-gradient(120deg, var(--navy-deep), var(--navy) 58%, #0c3b5f);
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(8, 31, 55, 0.16);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  gap: 0.7rem;
+}
+
+.brand-mark {
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, var(--sky-bright), var(--flow)) border-box;
+  border: 2px solid transparent;
+  color: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 8px 18px rgba(2, 16, 29, 0.22);
+}
+
+.brand-mark img {
+  width: 118%;
+  height: 118%;
+  object-fit: cover;
+}
+
+.brand strong,
+.brand small {
+  display: block;
+}
+
+.brand strong {
+  font-family: var(--brand-font);
+}
+
+.brand small {
+  max-width: min(58vw, 560px);
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Ações rápidas no canto do cabeçalho (alertas e perfil), como em um app de verdade. */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
+.header-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.header-icon:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(53, 163, 255, 0.5);
+}
+
+.header-icon .line-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-toggle {
+  display: inline-flex;
+}
+

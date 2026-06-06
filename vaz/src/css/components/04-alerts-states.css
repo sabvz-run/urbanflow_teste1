@@ -1,0 +1,189 @@
+/* Alertas, estados vazios, skeleton, modal e toast. */
+
+.alert-card {
+  position: relative;
+  display: grid;
+  gap: 0.4rem;
+  padding: 1rem 1rem 1rem 1.05rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 20px;
+  background: linear-gradient(160deg, var(--surface-soft), var(--surface));
+  box-shadow: var(--shadow-soft);
+}
+
+.alert-card::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 0;
+  width: 4px;
+  border-radius: 999px;
+  background: var(--alert);
+}
+
+.alert-card h3 {
+  margin-top: 0;
+}
+
+.alert-high,
+.alert-medium {
+  background: linear-gradient(160deg, rgba(245, 158, 11, 0.16), var(--surface));
+}
+
+.alert-high::before,
+.alert-medium::before {
+  background: var(--alert);
+}
+
+.alert-high .badge,
+.alert-medium .badge {
+  border-color: rgba(245, 158, 11, 0.36);
+  background: rgba(245, 158, 11, 0.16);
+  color: #fbbf24;
+}
+
+.alert-type-crowd,
+.alert-type-risk {
+  background: linear-gradient(160deg, rgba(220, 38, 38, 0.18), var(--surface));
+}
+
+.alert-type-crowd::before,
+.alert-type-risk::before {
+  background: var(--risk);
+}
+
+.alert-type-crowd .badge,
+.alert-type-risk .badge {
+  border-color: rgba(220, 38, 38, 0.4);
+  background: rgba(220, 38, 38, 0.18);
+  color: #fca5a5;
+}
+
+.alert-low {
+  background: linear-gradient(160deg, rgba(0, 229, 211, 0.14), var(--surface));
+}
+
+.alert-low::before {
+  background: var(--flow);
+}
+
+.alert-low .badge {
+  border-color: rgba(0, 229, 211, 0.36);
+  background: rgba(0, 229, 211, 0.14);
+  color: var(--flow);
+}
+
+.alert-inline {
+  padding: 0.7rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+  font-weight: 800;
+}
+
+.empty-state {
+  padding: 1rem;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-align: center;
+}
+
+.error-state {
+  padding: 1rem;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  border-radius: var(--radius);
+  background: rgba(220, 38, 38, 0.14);
+  color: #fca5a5;
+  font-weight: 700;
+  text-align: center;
+}
+
+.skeleton-card {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.skeleton-card span {
+  display: block;
+  height: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--surface-soft), var(--surface-strong), var(--surface-soft));
+  background-size: 220% 100%;
+  animation: skeletonPulse 1.5s ease-in-out infinite;
+}
+
+.skeleton-card span:first-child {
+  width: 52%;
+}
+
+.skeleton-card span:nth-child(2) {
+  width: 86%;
+}
+
+.skeleton-card span:nth-child(3) {
+  width: 68%;
+}
+
+@keyframes skeletonPulse {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: none;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(2, 8, 20, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.modal-backdrop.is-visible {
+  display: grid;
+}
+
+.modal {
+  width: min(100%, 460px);
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  box-shadow: var(--shadow);
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.toast-region {
+  position: fixed;
+  right: 1rem;
+  bottom: 6.4rem;
+  z-index: 70;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.toast {
+  max-width: min(320px, calc(100vw - 2rem));
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-strong);
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
